@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 
-class navBar extends Component {
+class NavBar extends Component {
 render() {
     return(
-        <div>
+        <div className="container bg-success">
             navBar
         </div>
     )
 }
 }
-export default navBar;
+export default NavBar;
