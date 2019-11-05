@@ -26,7 +26,7 @@ class Home extends React.Component {
                             <div className="modal-header">
                                 <button type="button" className="close" data-dismiss="modal"
                                         aria-hidden="true">&times;</button>
-                                <h4 className="modal-title" id="myModalLabel"></h4>
+                                <h4 className="modal-title" id="myModalLabel">m</h4>
                             </div>
                             <div className="modal-body">
                                 Are you sure want to Delete this team?
