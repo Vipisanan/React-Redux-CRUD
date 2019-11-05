@@ -8,7 +8,7 @@ import Home from "./components/Home";
     render() {
         return(
             <div>
-                {/*<Home></Home>*/}
+                <Home></Home>
                 App
             </div>
         );
