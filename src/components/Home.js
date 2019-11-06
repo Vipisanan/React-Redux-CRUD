@@ -1,5 +1,8 @@
 import React from "react";
-import {getData} from "../restServices/HomeService";
+import {getDataInService} from "../restServices/HomeService";
+import {connect} from "react-redux";
+
+import {getDataInAction} from "../action/HomeAction";
 
 class Home extends React.Component {
     constructor(props) {
@@ -11,7 +14,7 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
-        getData()
+        getDataInService()
             .then((res) => {
                 if (res.status === 200 && res.data && res.data.content) {
                     console.log(res.data);
@@ -36,6 +39,8 @@ class Home extends React.Component {
     }
 
     render() {
+        const {dataFromStore} = this.props;
+        console.log(dataFromStore);
         return (
             <div>
                 <br/>
@@ -107,4 +112,15 @@ class Home extends React.Component {
     }
 }
 
-export default Home;
+
+const mapStateToProps = ({getDataInStore}) => {
+    return {
+        dataFromStore: getDataInStore.getDataInStore,
+
+    };
+};
+
+export default connect(mapStateToProps,
+    {
+        getDataInAction
+    })(Home);

@@ -1,6 +1,6 @@
 import axios from "axios/index";
 
-export function getData() {
+export function getDataInService() {
     return new Promise(((resolve, reject) =>{
         axios({
             method:'GET',
